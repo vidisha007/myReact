@@ -1,46 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
 
+//react element
+const heading = (
+    <h1 className="head" tabIndex = "5">
+        Namaste react using jsx
+    </h1>    
+)
 
-{/* <div id = "parent">
-    <div id = "child">
-        <h1>i am hi</h1>
-        <h2>i am h2</h2>
-    </div>
-    <div id = "child2">
-        <h1>i am hi</h1>
-        <h2>i am h2</h2>
-    </div>
-</div> */}
+//react component
+const FirstFun = ()=>{
+    <h1>Iam a small react component</h1>
+}
 
+const ReactHeading = ()=>{
+ <div>
+{heading}
+<FirstFun/>
+<h2>I am a React Heading</h2>
+</div>
+}
 
-const heading = React.createElement(
-    'div',
-    {id:"parent"},
-    React.createElement(
-        'div',
-        {id:"child"},
-        [React.createElement(
-            'h1',
-            {id:"parent"},
-            "Hello, I am h1"),
-            React.createElement(
-                'h2',
-                {id:"parent"},
-                "Hello, I am h2")]
-),
-React.createElement(
-    'div',
-    {id:"child"},
-    [React.createElement(
-        'h1',
-        {id:"parent"},
-        "Hello, I am h1"),
-        React.createElement(
-            'h2',
-            {id:"parent"},
-            "Hello, I am vidisha")]
-));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
 
